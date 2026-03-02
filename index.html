@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <title>4 Adımda Tahta Hackleme</title>
+
     <style>
         body {
             text-align: center;
@@ -27,6 +28,12 @@
             cursor: pointer;
             text-decoration: none;
             color: white;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
         }
 
         .happymod { background-color: #00c853; }
@@ -34,10 +41,7 @@
         .warp { background-color: #f38020; }
         .opera { background-color: #ff1b2d; }
         .aptoide { background-color: #ff6f00; }
-
-        .btn:hover {
-            opacity: 0.8;
-        }
+        .credits-btn { background-color: #2962ff; }
 
         footer {
             position: fixed;
@@ -49,21 +53,85 @@
             font-size: 14px;
             background-color: #1e1e1e;
         }
+
+        /* Modal Arka Plan */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        /* Modal İçerik */
+        .modal-content {
+            background-color: #1e1e1e;
+            margin: 15% auto;
+            padding: 30px;
+            width: 300px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px #2962ff;
+            animation: fadeIn 0.4s ease-in-out;
+        }
+
+        .close {
+            color: red;
+            float: right;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
     </style>
 </head>
+
 <body>
 
     <h1>5 Adımda Hack</h1>
 
     <a href="happymod.apk" download class="btn happymod">HappyMod APK İndir</a>
-    <a href="com.google.android.youtube_20.14.43-1553866176_minAPI26(arm64-v8a,armeabi-v7a,x86,x86_64)(nodpi)_apkmirror.com.apk" download class="btn happymod2">Youtube APK İndir</a>
+    <a href="youtube.apk" download class="btn happymod2">Youtube APK İndir</a>
     <a href="warp.apk" download class="btn warp">1.1.1.1 WARP APK İndir</a>
     <a href="opera.apk" download class="btn opera">Opera APK İndir</a>
-    <a href="com.spotify.music_9.0.46.496-128191888_minAPI24(arm64-v8a,armeabi-v7a,x86,x86_64)(nodpi)_apkmirror.com.apk" download class="btn aptoide">Spotify APK İndir</a>
+    <a href="spotify.apk" download class="btn aptoide">Spotify APK İndir</a>
+
+    <!-- Credits Butonu -->
+    <button class="btn credits-btn" onclick="openModal()">CREDITS</button>
+
+    <!-- Modal -->
+    <div id="creditsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">✖</span>
+            <h2>Yusuf 6/C</h2>
+        </div>
+    </div>
 
     <footer>
         Bu Sitenin Tüm Hakları Saklıdır
     </footer>
+
+    <script>
+        function openModal() {
+            document.getElementById("creditsModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("creditsModal").style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            let modal = document.getElementById("creditsModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 
 </body>
 </html>
