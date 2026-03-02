@@ -82,7 +82,7 @@
             bottom: -100%;
             text-align: center;
             width: 100%;
-            animation: rollCredits 15s linear forwards;
+            animation: rollCredits 20s linear forwards;
         }
 
         .credits-roll h2 {
@@ -123,9 +123,7 @@
     <div id="creditsModal" class="modal">
         <span class="close" onclick="closeModal()">✖</span>
         <div class="modal-content">
-            <div class="credits-roll" id="creditsRoll">
-                <!-- Buraya istediğin kadar "Yusuf 6/C" eklenebilir -->
-            </div>
+            <div class="credits-roll" id="creditsRoll"></div>
         </div>
     </div>
 
@@ -134,6 +132,18 @@
     </footer>
 
     <script>
+        const roles = [
+            "Kodlayıcı",
+            "Tasarımcı",
+            "Testçi",
+            "Müzik",
+            "Animasyon",
+            "Efektler",
+            "Grafik",
+            "Yazılım",
+            "Dokümantasyon"
+        ];
+
         function openModal() {
             let modal = document.getElementById("creditsModal");
             let roll = document.getElementById("creditsRoll");
@@ -142,9 +152,10 @@
             roll.innerHTML = '';
 
             // Kaç tane satır istiyorsan onu ekle
-            for(let i = 0; i < 30; i++){
+            for(let i = 0; i < 20; i++){
+                let role = roles[i % roles.length]; // Roller döner
                 let line = document.createElement('h2');
-                line.textContent = "Yusuf 6/C";
+                line.textContent = `${role} : Yusuf 6/C`;
                 roll.appendChild(line);
             }
 
