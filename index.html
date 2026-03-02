@@ -1,180 +1,197 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8" />
-    <title>4 Adımda Tahta Hackleme</title>
-    <style>
-        body {
-            text-align: center;
-            font-family: Arial, sans-serif;
-            background-color: #121212;
-            color: white;
-            margin-top: 100px;
-        }
+<meta charset="UTF-8" />
+<title>4 Adımda Tahta Hackleme</title>
 
-        h1 {
-            margin-bottom: 40px;
-        }
+<style>
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: white;
+    margin-top: 100px;
+}
 
-        .btn {
-            display: block;
-            width: 250px;
-            margin: 15px auto;
-            padding: 15px;
-            font-size: 18px;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            text-decoration: none;
-            color: white;
-            transition: 0.3s;
-        }
+h1 {
+    margin-bottom: 40px;
+}
 
-        .btn:hover {
-            transform: scale(1.05);
-            opacity: 0.9;
-        }
+.btn {
+    display: block;
+    width: 250px;
+    margin: 15px auto;
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
 
-        .happymod { background-color: #00c853; }
-        .happymod2 { background-color: #00bfa5; }
-        .warp { background-color: #f38020; }
-        .opera { background-color: #ff1b2d; }
-        .aptoide { background-color: #ff6f00; }
-        .credits-btn { background-color: #2962ff; }
+.btn:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
 
-        footer {
-            position: fixed;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            text-align: left;
-            padding: 10px;
-            font-size: 14px;
-            background-color: #1e1e1e;
-        }
+.happymod { background-color: #00c853; }
+.happymod2 { background-color: #00bfa5; }
+.warp { background-color: #f38020; }
+.opera { background-color: #ff1b2d; }
+.aptoide { background-color: #ff6f00; }
+.credits-btn { background-color: #2962ff; }
 
-        /* Modal Arka Plan */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 999;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.9);
-            overflow: hidden;
-        }
+.music-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #9c27b0;
+}
 
-        /* Modal İçerik */
-        .modal-content {
-            position: relative;
-            height: 100%;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
-            overflow: hidden;
-        }
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    font-size: 14px;
+    background-color: #1e1e1e;
+}
 
-        .credits-roll {
-            position: absolute;
-            bottom: -100%;
-            text-align: center;
-            width: 100%;
-            animation: rollCredits 20s linear forwards;
-        }
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.95);
+    overflow: hidden;
+}
 
-        .credits-roll h2 {
-            margin: 10px 0;
-            font-size: 24px;
-        }
+.modal-content {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
 
-        .close {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            color: red;
-            font-size: 28px;
-            cursor: pointer;
-            z-index: 1000;
-        }
+.credits-roll {
+    position: absolute;
+    bottom: -100%;
+    text-align: center;
+    width: 100%;
+    animation: rollCredits 25s linear forwards;
+}
 
-        @keyframes rollCredits {
-            from { bottom: -100%; }
-            to { bottom: 100%; }
-        }
-    </style>
+.credits-roll h2 {
+    margin: 10px 0;
+    font-size: 24px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: red;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+@keyframes rollCredits {
+    from { bottom: -100%; }
+    to { bottom: 100%; }
+}
+</style>
 </head>
+
 <body>
 
-    <h1>5 Adımda Hack</h1>
+<h1>5 Adımda Hack</h1>
 
-    <a href="happymod.apk" download class="btn happymod">HappyMod APK İndir</a>
-    <a href="com.google.android.youtube_20.14.43-1553866176_minAPI26(arm64-v8a,armeabi-v7a,x86,x86_64)(nodpi)_apkmirror.com.apk" download class="btn happymod2">Youtube APK İndir</a>
-    <a href="warp.apk" download class="btn warp">1.1.1.1 WARP APK İndir</a>
-    <a href="opera.apk" download class="btn opera">Opera APK İndir</a>
-    <a href="com.spotify.music_9.0.46.496-128191888_minAPI24(arm64-v8a,armeabi-v7a,x86,x86_64)(nodpi)_apkmirror.com.apk" download class="btn aptoide">Spotify APK İndir</a>
+<a href="happymod.apk" download class="btn happymod">HappyMod APK İndir</a>
+<a href="youtube.apk" download class="btn happymod2">Youtube APK İndir</a>
+<a href="warp.apk" download class="btn warp">1.1.1.1 WARP APK İndir</a>
+<a href="opera.apk" download class="btn opera">Opera APK İndir</a>
+<a href="spotify.apk" download class="btn aptoide">Spotify APK İndir</a>
 
-    <!-- Credits Butonu -->
-    <button class="btn credits-btn" onclick="openModal()">CREDITS</button>
+<button class="btn credits-btn" onclick="openModal()">CREDITS</button>
+<button class="btn music-btn" onclick="toggleMusic()">MÜZİK AÇ / KAPAT</button>
 
-    <!-- Modal -->
-    <div id="creditsModal" class="modal">
-        <span class="close" onclick="closeModal()">✖</span>
-        <div class="modal-content">
-            <div class="credits-roll" id="creditsRoll"></div>
-        </div>
+<!-- 🎵 DOĞRU RAW GITHUB MP3 LINKİ -->
+<audio id="bgMusic" loop>
+    <source src="https://raw.githubusercontent.com/titantvman169-wq/g-r-ek-4-ad-m/main/DOORS%20Roblox%20OST%20Elevator%20Music.mp3" type="audio/mpeg">
+</audio>
+
+<div id="creditsModal" class="modal">
+    <span class="close" onclick="closeModal()">✖</span>
+    <div class="modal-content">
+        <div class="credits-roll" id="creditsRoll"></div>
     </div>
+</div>
 
-    <footer>
-        Bu Sitenin Tüm Hakları Saklıdır
-    </footer>
+<footer>
+Bu Sitenin Tüm Hakları Saklıdır
+</footer>
 
-    <script>
-        const roles = [
-            "Kodlayıcı",
-            "Tasarımcı",
-            "Testçi",
-            "Müzik",
-            "Animasyon",
-            "Efektler",
-            "Grafik",
-            "Yazılım",
-            "Dokümantasyon"
-        ];
+<script>
+const roles = [
+    "Kodlayıcı",
+    "Tasarımcı",
+    "Testçi",
+    "Müzik",
+    "Animasyon",
+    "Efektler",
+    "Grafik",
+    "Yazılım",
+    "Dokümantasyon"
+];
 
-        function openModal() {
-            let modal = document.getElementById("creditsModal");
-            let roll = document.getElementById("creditsRoll");
-            
-            // Her açılışta resetle
-            roll.innerHTML = '';
+function openModal() {
+    let modal = document.getElementById("creditsModal");
+    let roll = document.getElementById("creditsRoll");
 
-            // Kaç tane satır istiyorsan onu ekle
-            for(let i = 0; i < 20; i++){
-                let role = roles[i % roles.length]; // Roller döner
-                let line = document.createElement('h2');
-                line.textContent = `${role} : Yusuf 6/C`;
-                roll.appendChild(line);
-            }
+    roll.innerHTML = '';
 
-            modal.style.display = "block";
-        }
+    for(let i = 0; i < 25; i++){
+        let role = roles[i % roles.length];
+        let line = document.createElement('h2');
+        line.textContent = role + " : Yusuf 6/C";
+        roll.appendChild(line);
+    }
 
-        function closeModal() {
-            document.getElementById("creditsModal").style.display = "none";
-        }
+    modal.style.display = "block";
+}
 
-        window.onclick = function(event) {
-            let modal = document.getElementById("creditsModal");
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-    </script>
+function closeModal() {
+    document.getElementById("creditsModal").style.display = "none";
+}
+
+window.onclick = function(event) {
+    let modal = document.getElementById("creditsModal");
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+function toggleMusic() {
+    let music = document.getElementById("bgMusic");
+    if (music.paused) {
+        music.play();
+    } else {
+        music.pause();
+    }
+}
+</script>
 
 </body>
 </html>
-
-
